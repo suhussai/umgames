@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"> 
+
+
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="http://suhussai.url.ph/slide_script.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("p").hover(function() {
+          $("p").css("background-color", "yellow");
+          }, function() {
+          $("p").css("background-color", "pink");
+        });
+      });
+    </script>
+  </head>
+  
+  <body>
+
+    <gameBox>
+      <img src="gameBoxPic.png" alt="gameBox" usemap="#categorySelections">
+      <div class="slideshow">
+	<img src="screenshot_1.png" alt="Picture" />
+	<img src="screenshot_2.png" alt="Picture" />
+	<img src="screenshot_3.png" alt="Picture" />
+	<img src="screenshot_4.png" alt="Picture" />
+      </div>
+
+      <category1>
+	<img src="screenshot_4.png" alt="Picture" width="200px" height="200px" />
+      </category1>
+
+      <category2>
+	<img src="screenshot_3.png" alt="Picture" width="200px" height="200px" />
+      </category2>
+
+      <category3>
+	<img src="screenshot_2.png" alt="Picture" width="200px" height="200px" />
+      </category3>
+
+      <category4>
+	<img src="screenshot_1.png" alt="Picture" width="200px" height="200px" />
+      </category4>
+
+<!--
+
+      <category2>
+	<p> c2 </p>
+	
+      </category2>
+
+      <category3>
+	<p> c3 </p>
+	
+      </category3>
+
+      <category4>
+	<p> c4 </p>
+	
+      </category4>
+
+-->
+
+      <map name="categorySelections">
+<!--	<area shape="rect" coords="100,90,500,400" alt="favourites" href="favourites.html">
+-->	<area shape="rect" coords="500,90,730,295" alt="favourites1" href="favourites1.html">
+	<area shape="rect" coords="500,295,730,400" alt="favourites" href="favourites2">	
+	<area shape="rect" coords="100,400,400,520" alt="favourites2" href="favourites3.html">
+	<area shape="rect" coords="400,400,730,520" alt="favourites3" href="favourites4.html">
+      </map>
+
+    </gameBox>   
+
+    
+
+  </body>  
+
+
+</html>

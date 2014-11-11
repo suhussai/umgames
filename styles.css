@@ -1,0 +1,76 @@
+body {
+    background-image: url("woodenTable.png");
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+gameBox {
+    position:fixed;
+    left: 20%;
+    top: 0%;
+}
+
+gameBox img {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.slideshow {
+    border: 2px solid red;
+    display:inline;
+}
+
+.slideshow img { 
+    margin-top:75px;
+    margin-left:75px;
+    width:425px;
+    height:315px;
+}
+
+category1 {
+    border: 5px red solid;
+}
+
+category1 img {
+    margin-top:75px;
+    margin-left:490px;
+    width:235px;
+    height:200px;
+}
+
+
+category2 {
+    border: 5px red solid;
+}
+
+category2 img {
+    margin-top:275px;
+    margin-left:483px;
+    width:232px;
+    height:200px;
+}
+
+
+category3 {
+    border: 5px red solid;
+}
+
+category3 img {
+    margin-top:390px;
+    margin-left:48px;
+    width:220px;
+    height:150px;
+}
+
+category4 {
+    border: 5px red solid;
+}
+
+category4 img {
+    margin-top:390px;
+    margin-left:255px;
+    width:210px;
+    height:150px;
+}
+
