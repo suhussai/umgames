@@ -5,83 +5,171 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen"> 
-
-
     <!-- include jQuery library -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <!-- include Cycle plugin -->
     <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
-    <script type="text/javascript" src="http://suhussai.url.ph/slide_script.js"></script>
-    <script>
+    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript">
       $(document).ready(function() {
-        $("p").hover(function() {
-          $("p").css("background-color", "yellow");
-          }, function() {
-          $("p").css("background-color", "pink");
+        $('.slideshow').cycle({
+         fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
         });
       });
+
     </script>
+
+    <script>
+      $(document).ready(function() {
+          document.getElementById("gameSelectionBox").hover(function() {
+          document.getElementById("gameSelectionBox").css("visibility", "visible");
+          }, function() {
+          document.getElementById("gameSelectionBox").css("visibility", "hidden");
+        });
+      });
+      
+    </script>
+
+    <script>
+      var categories = new Array("", "category1", "category2", "category3", "category4", "category5");
+
+      var displayed = new Array(-1, 0, 0, 0, 0, 0);  
+    </script>
+
+
+
+
   </head>
   
   <body>
 
-    <gameBox>
-      <img src="gameBoxPic.png" alt="gameBox" usemap="#categorySelections">
+<!--
+
+    <div id="gameSelectionBox1">
+      <p> aisjdiajsd 1111111111111111111111111</p>
+      <a href="google.ca"> asda </a>
+    </div>
+
+
+    <div id="gameSelectionBox2">
+      <p> aisjdiajsd 222222222222222222222222</p>
+      <a href="google.ca"> asda </a>
+    </div>
+
+
+    <div id="gameSelectionBox3">
+      <p> aisjdiajsd 33333333333333333333</p>
+      <a href="google.ca"> asda </a>
+    </div>
+
+    <div id="gameSelectionBox4">
+      <p> aisjdiajsd 44444444444444444444444</p>
+      <a href="google.ca"> asda </a>
+    </div>
+
+    <div id="gameSelectionBox5">
+      <p> aisjdiajsd 555555555555555555555555</p>
+      <a href="google.ca"> asda </a>
+    </div>
+-->
+
+
+    <div id="gameBox">
+      <img src="gameBoxPic.png" alt="gameBox">
       <div class="slideshow">
-	<img src="screenshot_1.png" alt="Picture" />
-	<img src="screenshot_2.png" alt="Picture" />
+	<img src="screenshot_1.png" alt="Picture" /> 
+	<img src="screenshot_2.png" alt="Picture" /> 
 	<img src="screenshot_3.png" alt="Picture" />
 	<img src="screenshot_4.png" alt="Picture" />
       </div>
 
-      <category1>
-	<img src="screenshot_4.png" alt="Picture" width="200px" height="200px" />
-      </category1>
+      <div id="category1">
+	<img src="screenshot_4.png" alt="Picture" width="200px" height="200px" onclick="showSelection" /> 
+      </div>
 
-      <category2>
+      <div id="category2">
 	<img src="screenshot_3.png" alt="Picture" width="200px" height="200px" />
-      </category2>
+      </div>
 
-      <category3>
+      <div id="category3">
 	<img src="screenshot_2.png" alt="Picture" width="200px" height="200px" />
-      </category3>
+      </div>
 
-      <category4>
+      <div id="category4">
 	<img src="screenshot_1.png" alt="Picture" width="200px" height="200px" />
-      </category4>
+      </div>
 
-<!--
+      <div id="category5">
+	<img src="screenshot_5.png" alt="Picture" width="200px" height="200px" />
+      </div>
 
-      <category2>
-	<p> c2 </p>
-	
-      </category2>
 
-      <category3>
-	<p> c3 </p>
-	
-      </category3>
-
-      <category4>
-	<p> c4 </p>
-	
-      </category4>
-
--->
-
-      <map name="categorySelections">
-<!--	<area shape="rect" coords="100,90,500,400" alt="favourites" href="favourites.html">
--->	<area shape="rect" coords="500,90,730,295" alt="favourites1" href="favourites1.html">
-	<area shape="rect" coords="500,295,730,400" alt="favourites" href="favourites2">	
-	<area shape="rect" coords="100,400,400,520" alt="favourites2" href="favourites3.html">
-	<area shape="rect" coords="400,400,730,520" alt="favourites3" href="favourites4.html">
-      </map>
-
-    </gameBox>   
+    </div>
 
     
 
   </body>  
+
+<script>
+
+    
+clickCheck(1);
+clickCheck(2);
+clickCheck(3);
+clickCheck(4);
+clickCheck(5);
+
+designSelectionBox(i) {
+    var selectionBox = document.createElement("gameSelectionBox"+i);
+    selectionBox.style.float = left;
+    selectionBox.style.border = 1px red solid;
+    selectionBox.style.left = 0%; 
+    selectionBox.style.top = 0%; 
+    selectionBox.style.height = 500px; 
+    selectionBox.style.width = 30%; 
+    selectionBox.style.visibility = hidden; 
+
+}
+
+removeSelectionBox(i) {
+    var selectionBox = document.createElement("gameSelectionBox"+i);
+    selectionBox.parentNode.removeChild(selectionBox);
+
+
+}
+
+function hideAll() {
+
+    for (i = 1; i < categories.length; i++) {
+	document.getElementById("gameSelectionBox" + i).style.visibility = "hidden";
+	removeSelectionBox(i);
+	displayed[i] = 0;
+    }
+}
+
+function clickCheck(i) {
+    document.getElementById(categories[i]).onclick = function(){
+
+	if (displayed[i] == 0) {
+            hideAll();
+            designSelectionBox(i);
+            document.getElementById("gameSelectionBox" + i).style.visibility = "visible";
+            displayed[i] = 1;
+	}
+	
+	else {
+            document.getElementById("gameSelectionBox" + i).style.visibility = "hidden";
+            removeSelectionBox(i);
+            displayed[i] = 0;
+	}
+    };
+
+}
+
+
+
+
+</script>
 
 
 </html>

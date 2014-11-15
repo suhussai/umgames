@@ -1,76 +1,131 @@
 body {
-    background-image: url("woodenTable.png");
+    background-image: url("Elegant_Background-8.jpg");
     background-repeat: repeat;
     background-position: center top;
 }
 
-gameBox {
+#gameSelectionBox1 {
+    float:left;
+    border: 1px red solid;
+    left: 0%;
+    top: 0%;
+    height:500px;
+    width: 30%;
+    visibility: hidden;
+}
+
+#gameSelectionBox2 {
+    float:left;
+    border: 1px red solid;
+    left: 0%;
+    top: 0%;
+    height:500px;
+    width: 30%;
+    visibility: hidden;
+}
+
+#gameSelectionBox3 {
+    float:left;
+    border: 1px red solid;
+    left: 0%;
+    top: 0%;
+    height:500px;
+    width: 30%;
+    visibility: hidden;
+}
+
+#gameSelectionBox4 {
+    float:left;
+    border: 1px red solid;
+    left: 0%;
+    top: 0%;
+    height:500px;
+    width: 30%;
+    visibility: hidden;
+}
+
+#gameSelectionBox5 {
+    float:left;
+    border: 1px red solid;
+    left: 0%;
+    top: 0%;
+    height:500px;
+    width: 30%;
+    visibility: hidden;
+}
+
+#gameBox {
     position:fixed;
-    left: 20%;
+    left: 30%;
     top: 0%;
 }
 
-gameBox img {
+#gameBox img {
     position: absolute;
     z-index: -1;
 }
 
 
 .slideshow {
-    border: 2px solid red;
     display:inline;
 }
 
 .slideshow img { 
-    margin-top:75px;
-    margin-left:75px;
+    margin-top:85px;
+    margin-left:80px;
     width:425px;
-    height:315px;
-}
-
-category1 {
-    border: 5px red solid;
-}
-
-category1 img {
-    margin-top:75px;
-    margin-left:490px;
-    width:235px;
-    height:200px;
+    height:320px;
 }
 
 
-category2 {
-    border: 5px red solid;
+/*****************************************************************************/
+/* |------------------------------------------------------|-----------------|*/
+/* |                                                      |  Category 1     |*/
+/* |        GameBox                                       |                 |*/
+/* |                                                      |-----------------|*/
+/* |                                                      |  Category 2     |*/
+/* |------------------------------------------------------|                 |*/
+/* |---------------------------|--------------------------|-----------------|*/
+/* |        Category 3         |     Category 4           |   Category 5    |*/
+/* |---------------------------|--------------------------|-----------------|*/
+/*****************************************************************************/
+
+
+#category1 img {
+    margin-top:70px;
+    margin-left:505px;
+    width:230px;
+    height:160px;
 }
 
-category2 img {
-    margin-top:275px;
-    margin-left:483px;
-    width:232px;
-    height:200px;
+
+#category2 img {
+    margin-top:230px;
+    margin-left:505px;
+    width:230px;
+    height:160px;
 }
 
 
-category3 {
-    border: 5px red solid;
-}
-
-category3 img {
+#category3 img {
     margin-top:390px;
-    margin-left:48px;
+    margin-left:80px;
     width:220px;
     height:150px;
 }
 
-category4 {
-    border: 5px red solid;
+
+#category4 img {
+    margin-top:390px;
+    margin-left:300px;
+    width:205px;
+    height:150px;
 }
 
-category4 img {
+#category5 img {
     margin-top:390px;
-    margin-left:255px;
-    width:210px;
+    margin-left:505px;
+    width:230px;
     height:150px;
 }
 

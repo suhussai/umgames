@@ -3,15 +3,85 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"> 
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.slideshow').cycle({
+         fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+        });
+      });
 
+      function showSelection() {
+        document.getElementById('gameSelectionBox').css('visibility', 'visible'); 
+      }
+      
+      function hideSelection() {
+        document.getElementById('gameSelectionBox').css('visibility', 'hidden'); 
+      }
+
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $("category12").hover(function() {
+          $("gameSelectionBox").css("visibility", "visible");
+          }, function() {
+          $("gameSelectionBox").css("visibility", "hidden");
+        });
+      });
+      
+    </script>
   </head>
   
   <body>
+
+
+
+    <div id="gameSelectionBox">
+      
+    </div>
+
+    <div id="gameBox">
+      <img src="gameBoxPic.png" alt="gameBox">
+      <div class="slideshow">
+	<img src="screenshot_1.png" alt="Picture" /> 
+	<img src="screenshot_2.png" alt="Picture" /> 
+	<img src="screenshot_3.png" alt="Picture" />
+	<img src="screenshot_4.png" alt="Picture" />
+      </div>
+
+      <div id="category1" onclick="showSelection">
+	<img src="screenshot_4.png" alt="Picture" width="200px" height="200px" /> 
+      </div>
+
+      <div id="category2">
+	<img src="screenshot_3.png" alt="Picture" width="200px" height="200px" />
+      </div>
+
+      <div id="category3">
+	<img src="screenshot_2.png" alt="Picture" width="200px" height="200px" />
+      </div>
+
+      <div id="category4">
+	<img src="screenshot_1.png" alt="Picture" width="200px" height="200px" />
+      </div>
+
+      <category5>
+	<img src="screenshot_5.png" alt="Picture" width="200px" height="200px" />
+      </category5>
+
+
+    </gameBox>   
+
     
-    
-    
-  </body>
-  
+
+  </body>  
+
+
 </html>
