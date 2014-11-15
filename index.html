@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen"> 
     <!-- include jQuery library -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <!-- include Cycle plugin -->
     <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
     <script type="text/javascript">
@@ -14,12 +16,40 @@
         $('.slideshow').cycle({
          fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
         });
+        $("#selectionContent1").load("selectionContent1.html");
+        $("#selectionContent2").load("selectionContent2.html");
+        $("#selectionContent3").load("selectionContent3.html");
+        $("#selectionContent4").load("selectionContent4.html");
+        $("#selectionContent5").load("selectionContent5.html");
       });
 
     </script>
 
     <script>
       var categories = new Array("", "category1", "category2", "category3", "category4", "category5");
+      var forCategory1 = new Array("", "screenshot_1.png", "screenshot_2.png", "screenshot_3.png",
+                                  "screenshot_4.png", "", "",
+                                  "", "", "" 
+                                  "", "", "");
+      var forCategory2 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
+                                  "screenshot_8.png", "", "" 
+                                  "", "", "", 
+                                  "", "", ""); 
+      var forCategory3 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
+                                  "screenshot_8.png", "", "" 
+                                  "", "", "", 
+                                  "", "", ""); 
+      var forCategory4 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
+                                  "screenshot_8.png", "", "" 
+                                  "", "", "", 
+                                  "", "", ""); 
+      var forCategory5 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
+                                  "screenshot_8.png", "", "" 
+                                  "", "", "", 
+                                  "", "", ""); 
+
+
+      var gameSrc = new Array("", forCategory1, forCategory2);
       var displayed = new Array(-1, 0, 0, 0, 0, 0);  
     </script>
 
@@ -29,30 +59,25 @@
     <div id="mainWrapper">
 	
       <div id="gameSelectionBox1">
-	<p> aisjdiajsd 1111111111111111111111111</p>
-	<a href="google.ca"> asda </a>
+	<div id="selectionContent1"> <!-- html included within using jquery--> </div>
       </div>
 
 
       <div id="gameSelectionBox2">
-	<p> aisjdiajsd 222222222222222222222222</p>
-	<a href="google.ca"> asda </a>
+	<div id="selectionContent2"> <!-- html included within using jquery--> </div>
       </div>
 
 
       <div id="gameSelectionBox3">
-	<p> aisjdiajsd 33333333333333333333</p>
-	<a href="google.ca"> asda </a>
+	<div id="selectionContent3"> <!-- html included within using jquery--> </div>
       </div>
 
       <div id="gameSelectionBox4">
-	<p> aisjdiajsd 44444444444444444444444</p>
-	<a href="google.ca"> asda </a>
+	<div id="selectionContent4"> <!-- html included within using jquery--> </div>
       </div>
 
       <div id="gameSelectionBox5">
-	<p> aisjdiajsd 555555555555555555555555</p>
-	<a href="google.ca"> asda </a>
+	<div id="selectionContent5"> <!-- html included within using jquery--> </div>
       </div>
 
 
@@ -65,10 +90,10 @@
 	  <img src="screenshot_4.png" alt="Picture" />
 	</div>
 
-	<div id="category1">
-	  <img src="screenshot_4.png" alt="Picture" width="200px" height="200px" /> 
+	<div id="category1">	  
+	  <img src="screenshot_4.png" alt="Picture" width="200px" height="200px" />     
 	</div>
-
+	
 	<div id="category2">
 	  <img src="screenshot_3.png" alt="Picture" width="200px" height="200px" />
 	</div>
@@ -128,6 +153,9 @@ function showOne(i) {
     selectionBox.style.width = "30%"; 
     selectionBox.style.position = "absolute";
     displayed[i] = 1;
+    for (j = 1; j < gameSrc[i].length; j++) {
+	document.getElementById("img"+i+j).src = gameSrc[i][j];
+    }
 }
 
 function clickCheck(i) {
@@ -141,9 +169,6 @@ function clickCheck(i) {
         }
     };
 }
-
-
-
 
 </script>
 
