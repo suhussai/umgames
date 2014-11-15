@@ -1,0 +1,3 @@
+function showSelection() {
+    document.getElementById('gameSelectionBox').css 
+}
