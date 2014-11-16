@@ -7,16 +7,34 @@ body {
 
 #mainWrapper {
     float:left;
-    border:1px red solid;
+    border:0px red solid;
     width:100%;
     height:100%;
     position:absolute;
     z-index:-100;
 }
 
+#homeButton {
+   margin-left:360px;
+   margin-top:545px;   
+}
+#homeButton img {
+    width:100px;
+    height:100px;
+}
+
+#playHomeButton {
+   margin-left:290px;
+   margin-top:15px;   
+}
+#playHomeButton img {
+    width:100px;
+    height:100px;
+}
+
 #gameSelectionBox1 {
     float:left;
-    border: 1px red solid;
+    border: 0px red solid;
     left: 0%;
     top: 0%;
     height:500px;
@@ -26,7 +44,7 @@ body {
 
 #gameSelectionBox2 {
     float:left;
-    border: 1px red solid;
+    border: 0px red solid;
     left: 0%;
     top: 0%;
     height:500px;
@@ -36,7 +54,7 @@ body {
 
 #gameSelectionBox3 {
     float:left;
-    border: 1px red solid;
+    border: 0px red solid;
     left: 0%;
     top: 0%;
     height:500px;
@@ -46,7 +64,7 @@ body {
 
 #gameSelectionBox4 {
     float:left;
-    border: 1px red solid;
+    border: 0px red solid;
     left: 0%;
     top: 0%;
     height:500px;
@@ -56,7 +74,7 @@ body {
 
 #gameSelectionBox5 {
     float:left;
-    border: 1px red solid;
+    border: 0px red solid;
     left: 0%;
     top: 0%;
     height:500px;
@@ -81,7 +99,7 @@ body {
     margin-left:70px;
     width:680px;
     height:460px;
-    border:1px red solid;    
+    border:0px red solid;    
 }
 
 #game {
@@ -175,8 +193,6 @@ body {
 .CSSTableGenerator {
 	margin:0px;padding:0px;
 	width:100%;
-	box-shadow: 10px 10px 5px #888888;
-	border:1px solid #000000;
 	
 	-moz-border-radius-bottomleft:0px;
 	-webkit-border-bottom-left-radius:0px;
@@ -218,17 +234,18 @@ body {
 	-webkit-border-bottom-left-radius:0px;
 	border-bottom-left-radius:0px;
 }.CSSTableGenerator tr:hover td{
-	
+    background: rgba(100, 100, 100, 0);
+    		
+
 }
-.CSSTableGenerator tr:nth-child(odd){ background-color:#333333; }
-.CSSTableGenerator tr:nth-child(even)    { background-color:#191919; }.CSSTableGenerator td{
+.CSSTableGenerator td{
 	vertical-align:middle;
+	background: rgba(100, 100, 100, 0);	
 	
-	
-	border:1px solid #000000;
+
 	border-width:0px 1px 1px 0px;
-	text-align:center;
-	padding:9px;
+	text-align:left;
+	padding:7px;
 	font-size:10px;
 	font-family:Arial;
 	font-weight:normal;
@@ -241,14 +258,11 @@ body {
 	border-width:0px 0px 0px 0px;
 }
 .CSSTableGenerator tr:first-child td{
-	background:-o-linear-gradient(bottom, #007fff 5%, #0000bf 100%);	
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #007fff), color-stop(1, #0000bf) );
-	background:-moz-linear-gradient( center top, #007fff 5%, #0000bf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#0000bf");	
-	background: -o-linear-gradient(top,#007fff,0000bf);
+		background:-o-linear-gradient(bottom, #0000bf 5%, #0000bf 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0000bf), color-stop(1, #0000bf) );
+	background:-moz-linear-gradient( center top, #0000bf 5%, #0000bf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0000bf", endColorstr="#0000bf");	background: -o-linear-gradient(top,#0000bf,0000bf);
 
-	background-color:#007fff;
-	border:0px solid #000000;
+	background: rgba(100, 100, 100, 0);
 	text-align:center;
 	border-width:0px 0px 1px 1px;
 	font-size:14px;
@@ -256,23 +270,27 @@ body {
 	font-weight:bold;
 	color:#ffffff;
 }
-
 .CSSTableGenerator tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #007fff 5%, #0000bf 100%);	
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #007fff), color-stop(1, #0000bf) );
-	background:-moz-linear-gradient( center top, #007fff 5%, #0000bf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#0000bf");	
-	background: -o-linear-gradient(top,#007fff,0000bf);
-	background-color:#007fff;
-}
+	background:-o-linear-gradient(bottom, #0000bf 5%, #0000bf 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0000bf), color-stop(1, #0000bf) );
+	background:-moz-linear-gradient( center top, #0000bf 5%, #0000bf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0000bf", endColorstr="#0000bf");	background: -o-linear-gradient(top,#0000bf,0000bf);
+	
+	background: rgba(100, 100, 100, 0);
 
+}
 .CSSTableGenerator tr:first-child td:first-child{
 	border-width:0px 0px 1px 0px;
 }
-
 .CSSTableGenerator tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+
+.CSSTableGenerator td {
+    width:100px;
+    height:100px;
+}
+
+
 
 .myButton1 {
 	-moz-box-shadow: 0px 1px 50px 11px #1c1b18;
