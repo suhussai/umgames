@@ -25,32 +25,10 @@
 
     </script>
 
+
+    <script type="text/javascript" src="categories.js"> </script>
     <script>
-      var categories = new Array("", "category1", "category2", "category3", "category4", "category5");
-      var forCategory1 = new Array("", "screenshot_1.png", "screenshot_2.png", "screenshot_3.png",
-                                  "screenshot_4.png", "", "",
-                                  "", "", "",
-                                  "", "", "");
-      var forCategory2 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                                  "screenshot_8.png", "", "", 
-                                  "", "", "", 
-                                  "", "", ""); 
-      var forCategory3 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                                  "screenshot_8.png", "", "", 
-                                  "", "", "", 
-                                  "", "", ""); 
-      var forCategory4 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                                  "screenshot_8.png", "", "", 
-                                  "", "", "", 
-                                  "", "", ""); 
-      var forCategory5 = new Array("", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                                  "screenshot_8.png", "", "", 
-                                  "", "", "", 
-                                  "", "", ""); 
 
-
-      var gameSrc = new Array("", forCategory1, forCategory2, forCategory3, forCategory4, forCategory5);
-      var displayed = new Array(-1, 0, 0, 0, 0, 0);  
 
     </script>
 
@@ -59,25 +37,23 @@
   <body>
     <div id="mainWrapper">
 	
-      <div id="gameSelectionBox1">
+      <div id="ActionBox">
 	<div id="selectionContent1"> <!-- html included within using jquery--> </div>
       </div>
 
-
-      <div id="gameSelectionBox2">
+      <div id="AdventureBox">
 	<div id="selectionContent2"> <!-- html included within using jquery--> </div>
       </div>
 
-
-      <div id="gameSelectionBox3">
+      <div id="StrategyBox">
 	<div id="selectionContent3"> <!-- html included within using jquery--> </div>
       </div>
 
-      <div id="gameSelectionBox4">
+      <div id="ShootingBox">
 	<div id="selectionContent4"> <!-- html included within using jquery--> </div>
       </div>
 
-      <div id="gameSelectionBox5">
+      <div id="SportsBox">
 	<div id="selectionContent5"> <!-- html included within using jquery--> </div>
       </div>
 
@@ -85,30 +61,30 @@
       <div id="gameBox">
 	<img src="gameBoxPic.png" alt="gameBox">
 	<div class="slideshow">
-	  <img src="screenshot_1.png" alt="Picture" /> 
+	  <a href="play.html?name=FreeRunning2"><img src="screenshot_1.png" alt="Picture" /> </a>
 	  <img src="screenshot_2.png" alt="Picture" /> 
 	  <img src="screenshot_3.png" alt="Picture" />
 	  <img src="screenshot_4.png" alt="Picture" />
 	</div>
 	
 
-	<div id="category1">
-	  <div class="myButton1"> Action1 </div>
+	<div id="Action">
+	  <div class="myButton1"> Action </div>
 	</div>
 	
-	<div id="category2">
+	<div id="Adventure">
 	  <div class="myButton2"> Action2 </div>
 	</div>
 
-	<div id="category3">
+	<div id="Strategy">
 	  <div class="myButton3"> Action3 </div>
 	</div>
 
-	<div id="category4">
+	<div id="Shooting">
 	  <div class="myButton4"> Action4 </div>
 	</div>
 
-	<div id="category5">
+	<div id="Sports">
 	  <div class="myButton5"> Action5 </div>
 	</div>
 
@@ -120,6 +96,8 @@
   </body>  
 
 <script>
+
+  
  
   clickCheck(1);
   clickCheck(2);
@@ -149,7 +127,7 @@ function showOne(i) {
     var selectionBox = document.getElementById("gameSelectionBox" + i);
     selectionBox.style.visibility = "visible"; 
     selectionBox.style.float = "left";
-    selectionBox.style.border = "1px red solid";
+    selectionBox.style.border = "0px red solid";
     selectionBox.style.left = "0%"; 
     selectionBox.style.top = "0%"; 
     selectionBox.style.height = "500px"; 
@@ -173,9 +151,11 @@ function clickCheck(i) {
         }
     };
 }
-
+                                                                           
 </script>
 
 
 </html>
+
+
 

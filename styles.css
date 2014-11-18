@@ -32,7 +32,7 @@ body {
     height:100px;
 }
 
-#gameSelectionBox1 {
+#ActionBox {
     float:left;
     border: 0px red solid;
     left: 0%;
@@ -42,7 +42,7 @@ body {
     visibility: hidden;
 }
 
-#gameSelectionBox2 {
+#AdventureBox {
     float:left;
     border: 0px red solid;
     left: 0%;
@@ -52,7 +52,7 @@ body {
     visibility: hidden;
 }
 
-#gameSelectionBox3 {
+#StrategyBox {
     float:left;
     border: 0px red solid;
     left: 0%;
@@ -62,7 +62,7 @@ body {
     visibility: hidden;
 }
 
-#gameSelectionBox4 {
+#ShootingBox {
     float:left;
     border: 0px red solid;
     left: 0%;
@@ -72,7 +72,7 @@ body {
     visibility: hidden;
 }
 
-#gameSelectionBox5 {
+#SportsBox {
     float:left;
     border: 0px red solid;
     left: 0%;
@@ -152,7 +152,69 @@ body {
     width:0px;
     height:0px;
 }
-#category1 img {
+
+#center {
+    color:#505739;
+    text-align:center;
+    font-family:arial;
+    font-size:28px;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0px 2px 12px #ffffff;	
+    cursor:pointer;
+}
+
+#ActionTitle {
+    cursor:pointer;
+    margin-top:80px;
+    margin-left:505px;
+    width:230px;
+    height:160px;
+    position:absolute;
+    z-index:2;
+}
+
+#AdventureTitle {
+    cursor:pointer;
+    margin-top:230px;
+    margin-left:505px;
+    width:230px;
+    height:160px;
+    position:absolute;
+    z-index:2;
+}
+
+#StrategyTitle {
+    cursor:pointer;
+    margin-top:390px;
+    margin-left:80px;
+    width:220px;
+    height:150px;
+    position:absolute;
+    z-index:2;
+}
+
+#ShootingTitle {
+    cursor:pointer;
+    margin-top:390px;
+    margin-left:300px;
+    width:205px;
+    height:150px;
+    position:absolute;
+    z-index:2;
+}
+
+#SportsTitle {
+    cursor:pointer;
+    margin-top:390px;
+    margin-left:505px;
+    width:230px;
+    height:150px;
+    position:absolute;
+    z-index:2;
+}
+
+#Action img {
     margin-top:70px;
     margin-left:505px;
     width:230px;
@@ -160,7 +222,7 @@ body {
 }
 
 
-#category2 img {
+#Adventure img {
     margin-top:230px;
     margin-left:505px;
     width:230px;
@@ -168,7 +230,7 @@ body {
 }
 
 
-#category3 img {
+#Strategy img {
     margin-top:390px;
     margin-left:80px;
     width:220px;
@@ -176,18 +238,22 @@ body {
 }
 
 
-#category4 img {
+#Shooting img {
     margin-top:390px;
     margin-left:300px;
     width:205px;
     height:150px;
 }
 
-#category5 img {
+#Sports img {
     margin-top:390px;
     margin-left:505px;
     width:230px;
     height:150px;
+}
+
+#hide {
+    visibility: hidden;
 }
 
 .CSSTableGenerator {
@@ -319,6 +385,7 @@ body {
 	float:right;
 	height:65px;
 }
+
 .myButton1:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
 	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
