@@ -1,0 +1,2 @@
+var games = ["FreeRunning2", "pokemon"];
+var gameSources = ['<embed width="100%" height="100%" base="http://external.kongregate-games.com/gamez/0019/2194/live/" src="http://external.kongregate-games.com/gamez/0019/2194/live/embeddable_192194.swf" type="application/x-shockwave-flash"></embed><br/>Play free games at <a href="http://www.kongregate.com/">Kongregate</a>', 'pokemonRed'];
