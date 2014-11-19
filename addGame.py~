@@ -1,6 +1,0 @@
-print("Starting");
-
-gameFile = open("gameDB.js", "wb");
-
-game
-gameFile.write
