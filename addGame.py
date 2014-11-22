@@ -1,3 +1,6 @@
+import re;
+#for getting to replace using regular expressions
+
 print("Starting");
 
 '''
@@ -75,8 +78,9 @@ def writeTitleAndSource():
     gameSrcIndex = gameInfo.find(finder);
     srcIndex = gameInfo.find("''", gameSrcIndex + len(finder));
     gameInfo = gameInfo[0:srcIndex + len('""') - 1] + gameSource + gameInfo[srcIndex + len('""') - 1::]; 
-    
-    
+    gameInfo = re.sub(r'width=\"\d+..\"','width="100%"', gameInfo);
+    gameInfo = re.sub(r'height=\"\d+..\"','height="100%"', gameInfo);
+
 #    newGameInfo = gameSourceInfo[0:len(gameSourceInfo)-3] + gameSource + "\n//divider" +  gameTitleInfo[0] + gameTitleInfo[1][1:index+1] + splitter + '"' + gameTitle + gameTitleInfo[1][index+1::];
     
     print("This is the new game information being added: " + gameInfo);

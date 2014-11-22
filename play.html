@@ -21,7 +21,7 @@
       <div id="gameScreen">
 
 	<div id="game">
-
+	  
 	</div>
 
 	<div id="playHomeButton"> <a href="/"> <img src="images/httpzcoolcomcnpicpng1new_png1_052actionIcons_013png.png" /> </a> </div>
@@ -38,7 +38,7 @@ function loadGame() {
     var url = location.href;
     var game = url.split('=')[1];
     var gameIndex = findGame(game);
-    alert(gameIndex);
+//    alert(gameIndex);
 	if (gameIndex != -1) {
 	    //we found it
 	    var gameSource = gameSources[gameIndex];
@@ -59,7 +59,7 @@ function findGame(game) {
 		if (game == gameTitles[i][j]) {
 		found[0] = i;
 		found[1] = j;
-		alert("found");
+//		alert("found");
 		}
 
 	}
