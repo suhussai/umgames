@@ -59,12 +59,12 @@
 
 
       <div id="gameBox">
-	<img src="images/gameBoxPic.png" alt="gameBox">
+	<img src="gameBoxPic.png" alt="gameBox">
 	<div class="slideshow">
-	  <a href="play.html?name=FreeRunning2"><img src="images/screenshot_1.png" alt="Picture" /> </a>
-	  <img src="images/screenshot_2.png" alt="Picture" /> 
-	  <img src="images/screenshot_3.png" alt="Picture" />
-	  <img src="images/screenshot_4.png" alt="Picture" />
+	  <a href="play.html?name=FreeRunning2"><img src="screenshot_1.png" alt="Picture" /> </a>
+	  <img src="screenshot_2.png" alt="Picture" /> 
+	  <img src="screenshot_3.png" alt="Picture" />
+	  <img src="screenshot_4.png" alt="Picture" />
 	</div>
 	
 	<div id="ActionTitle"> <p id="center"> Action</p> </div>
@@ -98,7 +98,7 @@
 	  </div>
 	</div>
 
-	<div id="homeButton"> <a href="/"> <img src="images/httpzcoolcomcnpicpng1new_png1_052actionIcons_013png.png" /> </a> </div>
+	<div id="homeButton"> <a href=""> <img src="httpzcoolcomcnpicpng1new_png1_052actionIcons_013png.png" /> </a> </div>
 
       </div>
 

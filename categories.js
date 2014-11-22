@@ -1,30 +1,29 @@
-
 var categories = ["", "Action", "Adventure", "Strategy", "Shooting", "Sports"];
 var titles = ["", "ActionTitle", "AdventureTitle", "StrategyTitle", "ShootingTitle", "SportsTitle"];
 var gameSelectionBox = ["", "ActionBox", "AdventureBox", "StrategyBox", "ShootingBox", "SportsBox"];
 
-var forAction = ["", "screenshot_1.png", "screenshot_2.png", "screenshot_3.png",
-                 "screenshot_4.png", "", "",
+var forAction = ["", "images/screenshot_1.png", "images/screenshot_2.png", "images/screenshot_3.png",
+                 "images/screenshot_4.png", "", "",
                  "", "", "",
                  "", "", ""];
 
-var forAdventure = ["", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                    "screenshot_8.png", "", "", 
+var forAdventure = ["", "images/screenshot_5.png", "images/screenshot_6.png", "images/screenshot_7.png",
+                    "images/screenshot_8.png", "", "", 
                     "", "", "", 
                     "", "", ""]; 
 
-var forStrategy = ["", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                   "screenshot_8.png", "", "", 
+var forStrategy = ["", "images/screenshot_5.png", "images/screenshot_6.png", "images/screenshot_7.png",
+                   "images/screenshot_8.png", "", "", 
                    "", "", "", 
                    "", "", ""]; 
 
-var forShooting = ["", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                   "screenshot_8.png", "", "", 
+var forShooting = ["", "images/screenshot_5.png", "images/screenshot_6.png", "images/screenshot_7.png",
+                   "images/screenshot_8.png", "", "", 
                    "", "", "", 
                    "", "", ""]; 
 
-var forSports = ["", "screenshot_5.png", "screenshot_6.png", "screenshot_7.png",
-                 "screenshot_8.png", "", "", 
+var forSports = ["", "images/screenshot_5.png", "images/screenshot_6.png", "images/screenshot_7.png",
+                 "images/screenshot_8.png", "", "", 
                  "", "", "", 
                  "", "", ""]; 
 
