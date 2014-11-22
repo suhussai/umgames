@@ -27,13 +27,10 @@
 
 
     <script type="text/javascript" src="categories.js"> </script>
-    <script>
+    <script type="text/javascript" src="gameDB.js"> </script>
 
 
-    </script>
-
-  </head>
-  
+  </head>  
   <body>
     <div id="mainWrapper">
 	
@@ -141,9 +138,13 @@ function showOne(i) {
     selectionBox.style.width = "30%"; 
     selectionBox.style.position = "absolute";
     displayed[i] = 1;
-
+    alert(i);
+    
     for (j = 1; j < gameSrc[i].length; j++) {
+	alert(gameTitles[i][j]);
 	document.getElementById("img"+i+j).src = gameSrc[i][j];
+	
+	document.getElementById("ling"+i+j).href = "play.html?name=" +  gameTitles[i][j];
     }
 }
 

@@ -15,12 +15,11 @@ Process for adding game:
 
 def getTitle():    
     gameTitle = input("Enter game title: ");
-    gameTitle = ', "' + gameTitle + '"];';
+    print(gameTitle);
     return gameTitle;
 
 def getSource():
     gameSource = input("Enter game source: ");
-    gameSource = ", '" + gameSource + "'];";
     return gameSource
 
 def getCategory():
@@ -29,6 +28,7 @@ def getCategory():
 
 def getThumbnail():
     gameThumbnail = input("Enter game thumbnail name: ");
+    gameThumbnail = "images/" + gameThumbnail;
     return gameThumbnail
     
 def writeCategoryAndThumbnail():
@@ -42,6 +42,10 @@ def writeCategoryAndThumbnail():
     #there exists a chance where you might write more images than there is space
     #beware
     newCategoryInfo = categoryInfo[0] + splitter +  categoryInfo[1][0:index+1] + thumbnail + categoryInfo[1][index+1::];
+
+    print("This is the new game information being added: " + newCategoryInfo);
+    input("Press Enter to continue: ");
+
     categoryFile.seek(0);
     categoryFile.truncate();
     categoryFile.write(newCategoryInfo);
@@ -50,22 +54,37 @@ def writeCategoryAndThumbnail():
 def writeTitleAndSource():
     gameFile = open("gameDB.js", "r+");
     gameInfo = gameFile.read();
-    gameInfo = gameInfo.split('\n');
-    
-    gameTitleInfo = gameInfo[0];
-    #print(gameTitleInfo);
-    
-    gameSourceInfo = gameInfo[1];
-    #print(gameSourceInfo);
-    
+#    gameInfo = gameInfo.split('//divider');
+#    gameInfo = gameInfo.split('\n');
+#    print(len(gameInfo));
 
-    gameTitle = getTitle(); 
+#    gameSourceInfo = gameInfo[0];
+    #print(gameSourceInfo);
+
+
+    gameTitle = getTitle();
     gameSource = getSource();
+#    gameTitleInfo = "//divider\n" + gameInfo[1];
+    category = getCategory();
+    finder = 'var titleFor' + category + ' = ["", ';
+    gameTitleIndex = gameInfo.find(finder);
+    titleIndex = gameInfo.find('""', gameTitleIndex + len(finder));
+    gameInfo = gameInfo[0:titleIndex + len('""') - 1] + gameTitle + gameInfo[titleIndex + len('""') - 1::]; 
+
+    finder = 'var srcFor' + category + " = ['', ";
+    gameSrcIndex = gameInfo.find(finder);
+    srcIndex = gameInfo.find("''", gameSrcIndex + len(finder));
+    gameInfo = gameInfo[0:srcIndex + len('""') - 1] + gameSource + gameInfo[srcIndex + len('""') - 1::]; 
     
-    newGameInfo = gameTitleInfo[0:len(gameTitleInfo)-2] + gameTitle + "\n" + gameSourceInfo[0:len(gameSourceInfo)-2] + gameSource;
+    
+#    newGameInfo = gameSourceInfo[0:len(gameSourceInfo)-3] + gameSource + "\n//divider" +  gameTitleInfo[0] + gameTitleInfo[1][1:index+1] + splitter + '"' + gameTitle + gameTitleInfo[1][index+1::];
+    
+    print("This is the new game information being added: " + gameInfo);
+    input("Press Enter to continue: ");
+    
     gameFile.seek(0);
     gameFile.truncate();
-    gameFile.write(newGameInfo);
+    gameFile.write(gameInfo);
     
 
 writeTitleAndSource();

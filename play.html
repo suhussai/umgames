@@ -38,10 +38,11 @@ function loadGame() {
     var url = location.href;
     var game = url.split('=')[1];
     var gameIndex = findGame(game);
+    alert(gameIndex);
 	if (gameIndex != -1) {
 	    //we found it
 	    var gameSource = gameSources[gameIndex];
-	    document.getElementById("game").innerHTML = gameSource;
+	    document.getElementById("game").innerHTML = gameSources[gameIndex[0]][gameIndex[1]];
 
 	}
         else {
@@ -52,11 +53,15 @@ function loadGame() {
 }
 
 function findGame(game) {
-    var found = -1;
-    for (i = 0; i < games.length; i++) {
-	if (game == games[i]) {
-	    found = i;
-//         alert("found");
+    var found = new Array(-1,-1);
+    for (i = 1; i < gameTitles.length; i++) {
+	for (j = 1; j < gameTitles[i].length; j++) {
+		if (game == gameTitles[i][j]) {
+		found[0] = i;
+		found[1] = j;
+		alert("found");
+		}
+
 	}
     }
 return found;
