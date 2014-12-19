@@ -6,41 +6,23 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen"> 
     <title> UmGames </title>
+
+
+    <!-- include all necessary javascript scripts -->
     <!-- include jQuery library -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- include Cycle plugin -->
     <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
-    <script type="text/javascript">
-      if (navigator.appCodeName == "Mozilla") {
-      //http://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript
-      link = document.createElement( "link" );
-      link.href = "stylesM.css";
-      link.type = "text/css";
-      link.rel = "stylesheet";
-      link.media = "screen,print";
-      
-      document.getElementsByTagName( "head" )[0].appendChild( link );
-      }
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.slideshow').cycle({
-         fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-        });
-        $("#ActionContent").load("ActionContent.html");
-        $("#AdventureContent").load("AdventureContent.html");
-        $("#StrategyContent").load("StrategyContent.html");
-        $("#ShootingContent").load("ShootingContent.html");
-        $("#SportsContent").load("SportsContent.html");
-      });
-      
-    </script>
+    <script type="text/javascript" src="compatabilityScript.js">    </script>
+    <script type="text/javascript" src="slideshowScriptAndContentLoader.js"> </script>
 
 
     <script type="text/javascript" src="categories.js"> </script>
     <script type="text/javascript" src="gameDB.js"> </script>
+    <script type="text/javascript" src="clickerFunction.js"> </script> 
+
 
   </head>  
   <body>
@@ -113,93 +95,16 @@
 
     </div>
 
- <script type="text/javascript">
 
-   
-  var h = screen.height;
-  var w = screen.width;
-  var selectionBoxWidth = w*0.30;
-  var gameBoxWidth = w - selectionBoxWidth;
+  </body>  
 
-  var gameBoxController = document.getElementById("gameBox");
-  gameBoxController.width = gameBoxWidth;
-  gameBoxController.height = h;
-
-
-  
+<script>  
   clickCheck(1);
   clickCheck(2);
   clickCheck(3);
   clickCheck(4);
   clickCheck(5);
-  
-function hideAll() {
-
-    for (i = 1; i < categories.length; i++) {
-	if (displayed[i] == 1) {
-		    var selectionBox = document.getElementById(gameSelectionBox[i]);
-		    selectionBox.style.float = "left";
-		    selectionBox.style.border = "0px red solid";
-		    selectionBox.style.left = "0%";
-		    selectionBox.style.top = "0%";
-		    selectionBox.style.height = h;
-		    selectionBox.style.width = selectionBoxWidth;
-		    selectionBox.style.visibility = "hidden";
-		    selectionBox.style.position = "absolute";
-		    displayed[i] = 0;
-	}
-    }
-}
-
-function showOne(i) {
-    var selectionBox = document.getElementById(gameSelectionBox[i]);
-    selectionBox.style.visibility = "visible"; 
-    selectionBox.style.float = "left";
-    selectionBox.style.border = "0px red solid";
-    selectionBox.style.left = "0%"; 
-    selectionBox.style.top = "0%"; 
-    selectionBox.style.height = h; 
-    selectionBox.style.width = selectionBoxWidth; 
-    selectionBox.style.position = "absolute";
-    displayed[i] = 1;
-    
-    for (j = 1; j < gameSrc[i].length; j++) {
-	document.getElementById("img"+i+j).src = gameSrc[i][j];
-	
-	document.getElementById("ling"+i+j).href = "play.html?name=" +  gameTitles[i][j];
-    }
-}
-
-function clickCheck(i) {
-    document.getElementById(categories[i]).onclick = function(){
-	if (displayed[i] == 0) {
-            hideAll();
-            showOne(i);
-	}
-	else {
-	    hideAll();
-        }
-    };
-
-    document.getElementById(titles[i]).onclick = function(){
-	if (displayed[i] == 0) {
-            hideAll();
-            showOne(i);
-	}
-	else {
-	    hideAll();
-        }
-    };
-
-
-
-    
-}
-                                                                           
 </script>
-
-
-  </body>  
 </html>
 
 
